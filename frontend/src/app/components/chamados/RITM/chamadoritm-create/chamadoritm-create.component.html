@@ -1,0 +1,83 @@
+<strong>Automatico: Pendente-Enviado-Encerrado (assim que abre)</strong> <br>
+<br>
+
+<mat-card>
+  <mat-card-title class="titulo" >Cadastro de RITM</mat-card-title>
+    <form>
+        <!--Nome do Supervisor-->
+        <mat-form-field>
+            <input matInput placeholder="Aberto Por:" [(ngModel)]="cadRitm.nomesuper" name="nomesuper">
+        </mat-form-field>
+
+        <!--Número do RITM-->
+        <mat-form-field>
+            <input matInput placeholder="RITM:" [(ngModel)]="cadRitm.nrritm" name="nrritm">
+        </mat-form-field>
+       
+
+        <!--Agência-->
+        <mat-form-field>
+            <select matNativeControl  placeholder="Agencia:"  required [(ngModel)]="cadRitm.agencia" name="agencia">
+                <option value="Aparecida">Aparecida</option>
+                <option value="Biritiba Mirim">Biritiba Mirim</option>
+                <option value="Caçapava">Caçapava</option>
+                <option value="Cachoeira Paulista">Cachoeira Paulista</option>
+                <option value="Canas">Canas</option>
+                <option value="Caraguatatuba">Caraguatatuba</option>
+                <option value="Cruzeiro">Cruzeiro</option>
+                <option value="Ferraz De Vasconcelos">Ferraz De Vasconcelos</option>
+                <option value="Guararema">Guararema</option>
+                <option value="Guaratinguetá">Guaratinguetá</option>
+                <option value="Guarulhos Centro">Guarulhos Centro</option>
+                <option value="Guarulhos Pimentas">Guarulhos Pimentas</option>
+                <option value="Itaquaquecetuba">Itaquaquecetuba</option>
+                <option value="Jacareí">Jacareí</option>
+                <option value="Jambeiro">Jambeiro</option>
+                <option value="Lorena">Lorena</option>
+                <option value="Mogi Das Cruzes">Mogi Das Cruzes</option>
+                <option value="Monteiro Lobato">Monteiro Lobato</option>
+                <option value="Pindamonhangaba">Pindamonhangaba</option>
+                <option value="Poá">Poá</option>
+                <option value="Potim">Potim</option>
+                <option value="Roseira">Roseira</option>
+                <option value="Salesópolis">Salesópolis</option>
+                <option value="Santa Branca">Santa Branca</option>
+                <option value="São José Dos Campos">São José Dos Campos</option>
+                <option value="São Sebastião">São Sebastião</option>
+                <option value="Suzano">Suzano</option>
+                <option value="Taubaté">Taubaté</option>
+                <option value="Tremembé">Tremembé</option>
+                <option value="Vídeo Atendimento SP">Vídeo Atendimento SP</option>
+              </select>
+        </mat-form-field>
+
+        <!--Motivo-->
+        <mat-form-field>
+            <input matInput placeholder="Motivo" [(ngModel)]="cadRitm.motivo" name="motivo">
+        </mat-form-field>
+
+        <!--Data Abertura-->
+        <mat-form-field>
+            <input matInput type="date" placeholder="Data Abertura" [(ngModel)]="cadRitm.datainicio" name="datainicio">
+        </mat-form-field>
+
+        <!--Motivo e Hora Abertura-->
+        <mat-form-field>
+            <input matInput type="time" placeholder="Hora Abertura" [(ngModel)]="cadRitm.horainicio" name="horainicio">
+        </mat-form-field>
+
+        <!--Motivo e Descrição-->
+        <mat-form-field>
+            <input matInput placeholder="Descrição:" [(ngModel)]="cadRitm.descricao" name="descricao">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+
+<button mat-raised-button (click)="cadastroChamadoRitm()" color="primary">
+    Salvar
+</button>
+
+<button class="cancel" mat-raised-button (click)="cancelbutton()">
+    Cancelar
+</button>

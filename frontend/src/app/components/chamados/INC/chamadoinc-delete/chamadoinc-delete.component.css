@@ -1,0 +1,15 @@
+button{
+    
+    margin: 20px 15px 0px 0px;
+}
+
+.cancel {
+    background-color: red;
+    color: white;
+   
+}
+
+.botao{
+    background-color:darkred;
+    color: white;
+}

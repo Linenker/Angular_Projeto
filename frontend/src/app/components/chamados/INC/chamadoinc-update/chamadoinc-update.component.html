@@ -1,0 +1,238 @@
+<mat-card>
+    <mat-card-title class="titulo" >Base de INC</mat-card-title>
+      <form>
+
+          <!--Nome do Supervisor-->
+          <mat-form-field>
+              <input matInput placeholder="Aberto Por:" 
+              [(ngModel)]="cadInc.nomesuper" name="nomesuper">
+          </mat-form-field>
+  
+          <!--Número do INC-->
+          <mat-form-field>
+              <input matInput placeholder="INC:" 
+              [(ngModel)]="cadInc.nrinc" name="nrinc">
+          </mat-form-field>
+         
+  
+          <!--Agência-->
+          <mat-form-field>
+              <select matNativeControl  placeholder="Agencia:"  
+              required [(ngModel)]="cadInc.agencia" name="agencia">
+
+                  <option value="Aparecida">Aparecida</option>
+                  <option value="Biritiba Mirim">Biritiba Mirim</option>
+                  <option value="Caçapava">Caçapava</option>
+                  <option value="Cachoeira Paulista">Cachoeira Paulista</option>
+                  <option value="Canas">Canas</option>
+                  <option value="Caraguatatuba">Caraguatatuba</option>
+                  <option value="Cruzeiro">Cruzeiro</option>
+                  <option value="Ferraz De Vasconcelos">Ferraz De Vasconcelos</option>
+                  <option value="Guararema">Guararema</option>
+                  <option value="Guaratinguetá">Guaratinguetá</option>
+                  <option value="Guarulhos Centro">Guarulhos Centro</option>
+                  <option value="Guarulhos Pimentas">Guarulhos Pimentas</option>
+                  <option value="Itaquaquecetuba">Itaquaquecetuba</option>
+                  <option value="Jacareí">Jacareí</option>
+                  <option value="Jambeiro">Jambeiro</option>
+                  <option value="Lorena">Lorena</option>
+                  <option value="Mogi Das Cruzes">Mogi Das Cruzes</option>
+                  <option value="Monteiro Lobato">Monteiro Lobato</option>
+                  <option value="Pindamonhangaba">Pindamonhangaba</option>
+                  <option value="Poá">Poá</option>
+                  <option value="Potim">Potim</option>
+                  <option value="Roseira">Roseira</option>
+                  <option value="Salesópolis">Salesópolis</option>
+                  <option value="Santa Branca">Santa Branca</option>
+                  <option value="São José Dos Campos">São José Dos Campos</option>
+                  <option value="São Sebastião">São Sebastião</option>
+                  <option value="Suzano">Suzano</option>
+                  <option value="Taubaté">Taubaté</option>
+                  <option value="Tremembé">Tremembé</option>
+                  <option value="Vídeo Atendimento SP">Vídeo Atendimento SP</option>
+                </select>
+          </mat-form-field>
+  
+          <!--Motivo-->
+          <mat-form-field>
+  
+                  <select matNativeControl placeholder="Motivo:"  
+                  required [(ngModel)]="cadInc.motivo" name="motivo">
+
+                    <option value="Rede">Rede</option>
+                    <option value="SAP">SAP</option>
+                    <option value="Lumus">Lumus</option>
+                    <option value="Impressora">Impressora</option>
+                    <option value="Mural_Digital">Mural Digital</option>
+                    <option value="Totem">Totem</option>
+                    <option value="Computador">Computador</option>
+                    <option value="Hotline">Hotline</option>
+                    <option value="Internent">Internent</option>
+                    <option value="Telefone">Telefone</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+          </mat-form-field>
+  
+              <!--Submotivo-->
+              <mat-form-field>
+                  <select matNativeControl placeholder="SubMotivo:"  
+                  required [(ngModel)]="cadInc.submotivo"  name="submotivo">
+                          
+                          <optgroup label="Rede">
+                            <option motivo="Rede" submotivo="Lentidão">Lentidão</option>
+                            <option motivo="Rede" submotivo="Sem Rede">Sem Rede</option>
+                            <option motivo="Rede" submotivo="Pasta na Rede">Pasta na Rede</option>
+                            <option motivo="Rede" submotivo="Reset de Login">Reset de Login</option>
+                          </optgroup>
+                          
+                          <optgroup label="SAP">
+                            <option motivo="SAP" submotivo="Inoperante">Inoperante</option>
+                            <option motivo="SAP" submotivo="Lentidão">Lentidão</option>
+                            <option motivo="SAP" submotivo="Reset de Login">Reset de Login</option>
+                            <option motivo="SAP" submotivo="Configuração">Configuração</option>
+                            <option motivo="SAP" submotivo="Emissão de Serviço">Emissão de Serviço</option>
+                            <option motivo="SAP" submotivo="Erro SAP">Erro SAP</option>
+                          </optgroup>
+                        
+                          <optgroup label="Lumus">
+                              <option motivo="Lumus" submotivo="Inoperante">Inoperante</option>
+                              <option motivo="Lumus" submotivo="Lentidão">Lentidão</option>
+                              <option motivo="Lumus" submotivo="Reset de Login">Reset de Login</option>
+                              <option motivo="Lumus" submotivo="Configuração">Configuração</option>
+                              <option motivo="Lumus" submotivo="Emissão de Serviço">Emissão de Serviço</option>
+                              <option motivo="Lumus" submotivo="Erro Impressão">Erro Impressão</option>
+                          </optgroup>
+  
+                          <optgroup label="Impressora">
+                              <option motivo="Impressora" submotivo="Equipamento">Equipamento</option>
+                              <option motivo="Impressora" submotivo="Configuração">Configuração</option>
+                              <option motivo="Impressora" submotivo="Scanner">Scanner</option>
+                              <option motivo="Impressora" submotivo="Toner">Toner</option>
+                              <option motivo="Impressora" submotivo="Impressora Senha">Impressora Senha</option>
+                              <option motivo="Impressora" submotivo="Impressora Totem">Impressora Totem</option>
+                          </optgroup>
+                          
+                          <optgroup label="Totem">
+                              <option motivo="Totem" submotivo="Inoperante">Inoperante</option>
+                              <option motivo="Totem" submotivo="Não Imprime">Não Imprime</option>
+                          </optgroup>
+  
+                          
+                          <optgroup label="Mural Digital">
+                              <option motivo="Mural Digital" submotivo="Inoperante">Inoperante</option>
+                          </optgroup>
+  
+                          
+                          <optgroup label="Computador">
+                              <option motivo="Computador" submotivo="Equipamento">Equipamento</option>
+                              <option motivo="Computador" submotivo="Aplicativos">Aplicativos</option>
+                              <option motivo="Computador" submotivo="Lentidão">Lentidão</option>
+                              <option motivo="Computador" submotivo="Periféricos">Periféricos</option>
+                
+                          </optgroup>
+  
+                          
+                          <optgroup label="HotLine">
+                              <option motivo="HotLine" submotivo="Inoperante">Inoperante</option>
+                              <option motivo="HotLine" submotivo="Equipamento">Equipamento</option>
+                          </optgroup>
+  
+                          
+                          <optgroup label="Internet">
+                              <option motivo="Internet" submotivo="Sem Internet">Sem Internet</option>
+                              <option motivo="Internet" submotivo="Lentidão">Lentidão</option>  
+                          </optgroup>
+  
+                          
+                          <optgroup label="Telefone">
+                              <option motivo="Telefone" submotivo="Sem Linha">Sem Linha</option>
+                              <option motivo="Telefone" submotivo="Equipamento">Equipamento</option>
+                              <option motivo="Telefone" submotivo="Awaya">Awaya</option>
+                          </optgroup>
+  
+                          
+                          <optgroup label="Outros">
+                              <option motivo="Outros" submotivo="Outros">Outros</option>
+                              <option motivo="Outros" submotivo="Painel de Senha">Painel de Senha</option>
+                              <option motivo="Outros" submotivo="Outlook">Outlook</option>
+  
+                          </optgroup>
+  
+  
+                      </select>
+            </mat-form-field>
+  
+          <!--Data Abertura-->
+          <mat-form-field>
+              <input matInput type="date" placeholder="Data Abertura" 
+              [(ngModel)]="cadInc.datainicio" name="datainicio">
+          </mat-form-field>
+  
+          <!--Hora Abertura-->
+          <mat-form-field>
+              <input matInput type="time" placeholder="Hora Abertura" 
+              [(ngModel)]="cadInc.horainicio" name="horainicio">
+          </mat-form-field>
+  
+          <!--Descrição-->
+          <mat-form-field>
+              <input matInput placeholder="Descrição:" 
+              [(ngModel)]="cadInc.descricao" name="descricao">
+          </mat-form-field>
+
+                <!--Data Final-->
+                <mat-form-field>
+                    <input matInput type="date" placeholder="Data Fim" 
+                    [(ngModel)]="cadInc.datafim" name="datafim">
+                </mat-form-field>
+        
+                <!--Hora Final-->
+                <mat-form-field>
+                    <input matInput type="time" placeholder="Hora Fim" 
+                    [(ngModel)]="cadInc.horafim" name="horafim">
+                </mat-form-field>
+        
+                <!--status-->
+                <mat-form-field>              
+                    <select matNativeControl placeholder="Status:"  
+                    required [(ngModel)]="cadInc.status" name="status">
+  
+                      <option value="Aberto">Aberto</option>
+                      <option value="Encerrado">Encerrado</option>
+                      <option value="Em Resolução">Em Resolução</option>
+                      <option value="Cancelado">Cancelado</option>
+                      <option value="Calendarizado">Calendarizado/option>
+                      <option value="Pendente de Utilizador">Pendente de Utilizador/option>
+                      <option value="Não Atribuido">Não Atribuido</option>
+                      <option value="Atribuído">Atribuído</option>
+                      <option value="Resolvido">Resolvido</option>
+                      <option value="Fechado">Fechado</option>
+                    </select>
+                
+                
+                </mat-form-field>
+        
+                <!--Observacao-->
+                <mat-form-field>
+                    <input matInput placeholder="Observacao:" 
+                    [(ngModel)]="cadInc.observacao" name="observacao">
+                </mat-form-field>
+
+                 <!--grupoatrib-->
+                 <mat-form-field>
+                    <input matInput placeholder="Grupo Atribuição:" 
+                    [(ngModel)]="cadInc.grupoatrib" name="grupoatrib">
+                </mat-form-field>
+      </form>
+  </mat-card>
+  
+  
+  
+  <button mat-raised-button (click)="updateChamadoInc()" color="primary">
+      Atualizar
+  </button>
+  
+  <button class="cancel" mat-raised-button (click)="cancelbutton()">
+      Cancelar
+  </button>
+  

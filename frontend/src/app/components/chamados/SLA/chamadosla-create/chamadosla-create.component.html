@@ -1,0 +1,150 @@
+<strong>Automatico: Pendente-Enviado-Encerrado (assim que abre)</strong> <br>
+
+
+<mat-card>
+  <mat-card-title class="titulo" >Cadastro de SLA</mat-card-title>
+    <form>
+        <!--Nome do Supervisor-->
+        <mat-form-field>
+            <input matInput placeholder="Aberto Por:" [(ngModel)]="cadsla.nomesuper" name="nomesuper">
+        </mat-form-field>
+
+        <!--Número do INC-->
+        <mat-form-field>
+            <input matInput placeholder="SLA:" [(ngModel)]="cadsla.nrsla" name="nrsla">
+        </mat-form-field>
+       
+
+        <!--Agência-->
+        <mat-form-field>
+            <select matNativeControl  placeholder="Agencia:"  required [(ngModel)]="cadsla.agencia" name="agencia">
+                <option value="Aparecida">Aparecida</option>
+                <option value="Biritiba Mirim">Biritiba Mirim</option>
+                <option value="Caçapava">Caçapava</option>
+                <option value="Cachoeira Paulista">Cachoeira Paulista</option>
+                <option value="Canas">Canas</option>
+                <option value="Caraguatatuba">Caraguatatuba</option>
+                <option value="Cruzeiro">Cruzeiro</option>
+                <option value="Ferraz De Vasconcelos">Ferraz De Vasconcelos</option>
+                <option value="Guararema">Guararema</option>
+                <option value="Guaratinguetá">Guaratinguetá</option>
+                <option value="Guarulhos Centro">Guarulhos Centro</option>
+                <option value="Guarulhos Pimentas">Guarulhos Pimentas</option>
+                <option value="Itaquaquecetuba">Itaquaquecetuba</option>
+                <option value="Jacareí">Jacareí</option>
+                <option value="Jambeiro">Jambeiro</option>
+                <option value="Lorena">Lorena</option>
+                <option value="Mogi Das Cruzes">Mogi Das Cruzes</option>
+                <option value="Monteiro Lobato">Monteiro Lobato</option>
+                <option value="Pindamonhangaba">Pindamonhangaba</option>
+                <option value="Poá">Poá</option>
+                <option value="Potim">Potim</option>
+                <option value="Roseira">Roseira</option>
+                <option value="Salesópolis">Salesópolis</option>
+                <option value="Santa Branca">Santa Branca</option>
+                <option value="São José Dos Campos">São José Dos Campos</option>
+                <option value="São Sebastião">São Sebastião</option>
+                <option value="Suzano">Suzano</option>
+                <option value="Taubaté">Taubaté</option>
+                <option value="Tremembé">Tremembé</option>
+                <option value="Vídeo Atendimento SP">Vídeo Atendimento SP</option>
+              </select>
+        </mat-form-field>
+
+        <!--Motivo-->
+        <mat-form-field>
+
+                <select matNativeControl placeholder="Motivo:"  required [(ngModel)]="cadsla.motivo" name="motivo">
+                  <option value="Ar Condicionado">Ar Condicionado</option>
+                  <option value="Jardinagem">Jardinagem</option>
+                  <option value="Limpeza">Limpeza</option>
+                  <option value="Civil">Civil</option>
+                  <option value="Elétrica">Elétrica</option>
+                  <option value="Hidráulica">Hidráulica</option>
+                  <option value="Mecânica">Mecânica</option>
+                  <option value="Outros">Outros</option>
+                </select>
+        </mat-form-field>
+
+            <!--Submotivo-->
+            <mat-form-field>
+                <select matNativeControl placeholder="SubMotivo:"  required [(ngModel)]="cadsla.submotivo"  name="submotivo">
+                        
+                        <optgroup label="Ar Condicionado">
+                          <option motivo="Ar Condicionado" submotivo="Defeito">Defeito</option>
+                          <option motivo="Ar Condicionado" submotivo="Manutenção/Limpeza">Manutenção/Limpeza</option>
+                          <option motivo="Ar Condicionado" submotivo="Troca">Troca</option>
+                          <option motivo="Ar Condicionado" submotivo="Instalação">Instalação</option>
+                        </optgroup>
+                        
+                        <optgroup label="Jardinagem">
+                          <option motivo="Jardinagem" submotivo="Limpeza/Poda">Limpeza/Poda</option>
+                          <option motivo="Jardinagem" submotivo="Manutenção">Manutenção</option>
+                        </optgroup>
+                      
+                        <optgroup label="Limpeza">
+                            <option motivo="Limpeza" submotivo="Dedetização">Dedetização</option>
+                            <option motivo="Limpeza" submotivo="Geral">Geral</option>
+                            <option motivo="Limpeza" submotivo="Produtos">Produtos</option>
+                        </optgroup>
+
+                        <optgroup label="Civil">
+                            <option motivo="Civil" submotivo="Infraestrutura">Infraestrutura</option>
+                            <option motivo="Civil" submotivo="Desentupimento">Desentupimento</option>
+                            <option motivo="Civil" submotivo="Instalação">Instalação</option>
+                            <option motivo="Civil" submotivo="Conserto">Conserto</option>
+                            <option motivo="Civil" submotivo="Extintor">Extintor</option>
+                            
+                        </optgroup>
+                        
+                        <optgroup label="Elétrica">
+                            <option motivo="Elétrica" submotivo="Lâmpadas/Tomadas">Lâmpadas/Tomadas</option>
+                            <option motivo="Elétrica" submotivo="Equipamentos">Equipamentos</option>
+                            <option motivo="Elétrica" submotivo="Telefonia">Telefonia</option>
+                            <option motivo="Elétrica" submotivo="Instalação">Instalação</option>
+                        </optgroup>
+
+                        
+                        <optgroup label="Hidráulica">
+                            <option motivo="Hidráulica" submotivo="Torneiras">Torneiras</option>
+                            <option motivo="Hidráulica" submotivo="Vasos">Vasos</option>
+                            <option motivo="Hidráulica" submotivo="Pia">Pia</option>
+                            <option motivo="Hidráulica" submotivo="Canos">Canos</option>
+                        </optgroup>
+
+                        <optgroup label="Mecânica">
+                            <option motivo="Mecânica" submotivo="Equipamento">Gerador</option>             
+                        </optgroup>
+
+                        <optgroup label="Outros">
+                            <option motivo="Outros" submotivo="Outros">Outros</option>
+                        </optgroup>
+
+
+                    </select>
+          </mat-form-field>
+
+        <!--Motivo e Data Abertura-->
+        <mat-form-field>
+            <input matInput type="date" placeholder="Data Abertura" [(ngModel)]="cadsla.datainicio" name="datainicio">
+        </mat-form-field>
+
+        <!--Motivo e Hora Abertura-->
+        <mat-form-field>
+            <input matInput type="time" placeholder="Hora Abertura" [(ngModel)]="cadsla.horainicio" name="horainicio">
+        </mat-form-field>
+
+        <!--Motivo e Descrição-->
+        <mat-form-field>
+            <input matInput placeholder="Descrição:" [(ngModel)]="cadsla.descricao" name="descricao">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="cadastroChamadoSla()" color="primary">
+    Salvar
+</button>
+
+<button class="cancel" mat-raised-button (click)="cancelbutton()">
+    Cancelar
+</button>

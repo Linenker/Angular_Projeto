@@ -1,0 +1,102 @@
+<button mat-raised-button class="botao" (click)="deleteChamadoInc()">
+    Deletar
+</button>
+
+<button class="cancel" mat-raised-button (click)="cancelbutton()">
+    Cancelar
+</button>
+
+
+<mat-card>
+    <mat-card-title class="titulo" >Deseja Deletar INC?</mat-card-title>
+      <form>
+
+          <!--Nome do Supervisor-->
+          <mat-form-field>
+              <input matInput placeholder="Aberto Por:" 
+              [(ngModel)]="cadInc.nomesuper" name="nomesuper" disabled>
+          </mat-form-field>
+  
+          <!--Número do INC-->
+          <mat-form-field>
+              <input matInput placeholder="INC:" 
+              [(ngModel)]="cadInc.nrinc" name="nrinc" disabled>
+          </mat-form-field>
+         
+  
+          <!--Agência-->
+          <mat-form-field>
+              <input matInput placeholder="Agencia" 
+              [(ngModel)]="cadInc.agencia" name="agencia" disabled>   
+
+          </mat-form-field>
+  
+          <!--Motivo-->
+          <mat-form-field>
+                  <input matInput placeholder="Motivo" 
+                  [(ngModel)]="cadInc.motivo" name="motivo" disabled>   
+          </mat-form-field>
+  
+              <!--Submotivo-->
+              <mat-form-field>  
+                <input matInput placeholder="SubMotivo" 
+                [(ngModel)]="cadInc.submotivo" name="submotivo" disabled>
+            </mat-form-field>
+  
+          <!--Data Abertura-->
+          <mat-form-field>
+              <input matInput type="date" placeholder="Data Abertura" 
+              [(ngModel)]="cadInc.datainicio" name="datainicio" disabled>
+          </mat-form-field>
+  
+          <!--Hora Abertura-->
+          <mat-form-field>
+              <input matInput type="time" placeholder="Hora Abertura" 
+              [(ngModel)]="cadInc.horainicio" name="horainicio" disabled>
+          </mat-form-field>
+  
+          <!--Descrição-->
+          <mat-form-field>
+              <input matInput placeholder="Descrição:" 
+              [(ngModel)]="cadInc.descricao" name="descricao" disabled>
+          </mat-form-field>
+
+                 <!--reincidente-->
+                 <mat-form-field>
+                    <input matInput placeholder="Reincidente" 
+                    [(ngModel)]="cadInc.reincidente" name="reincidente" disabled>
+                </mat-form-field>
+
+                <!--Data Final-->
+                <mat-form-field>
+                    <input matInput type="date" placeholder="Data Fim" 
+                    [(ngModel)]="cadInc.datafim" name="datafim" disabled>
+                </mat-form-field>
+        
+                <!--Hora Final-->
+                <mat-form-field>
+                    <input matInput type="time" placeholder="Hora Fim" 
+                    [(ngModel)]="cadInc.horafim" name="horafim" disabled> 
+                </mat-form-field>
+        
+                <!--status--> 
+                <mat-form-field>
+                    <input matInput placeholder="Status:" 
+                    [(ngModel)]="cadInc.status" name="status" disabled>
+                </mat-form-field>
+
+                <!--Observacao-->
+                <mat-form-field>
+                    <input matInput placeholder="Observacao:" 
+                    [(ngModel)]="cadInc.observacao" name="observacao" disabled>
+                </mat-form-field>
+
+                 <!--grupoatrib-->
+                 <mat-form-field>
+                    <input matInput placeholder="Grupo Atribuição:" 
+                    [(ngModel)]="cadInc.grupoatrib" name="grupoatrib" disabled>
+                </mat-form-field>
+      </form>
+  </mat-card>
+
+

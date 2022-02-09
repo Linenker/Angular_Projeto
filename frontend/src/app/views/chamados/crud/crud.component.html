@@ -1,0 +1,78 @@
+<mat-card class="cartoes mat-elevation-z3">
+    <mat-card-subtitle>
+        Cadastro de chamados
+    </mat-card-subtitle>
+
+    <mat-card-title>
+        <button class="botaochamado" mat-raised-button (click)="navigateToChamadoIncCreate()">
+            Cadastrar INC
+        </button>
+        <button class="botaochamado" mat-raised-button (click)="navigateToChamadoSlaCreate()">
+            Cadastrar SLA
+        </button>       
+        <button class="botaochamado" mat-raised-button (click)="navigateToChamadoRitmCreate()">
+            Cadastrar RITM
+        </button>
+    </mat-card-title>
+</mat-card>
+
+<mat-card class="cartoes mat-elevation-z3">
+<mat-card-subtitle>
+    Base de Dados
+</mat-card-subtitle>
+
+<mat-card-title>
+    <button class="botaochamado" mat-raised-button (click)="navigateToChamadoIncRead()">    
+        Base INC
+    </button>
+    <button class="botaochamado" mat-raised-button (click)="navigateToChamadoSlaRead()">
+        Base SLA
+    </button>
+    <button class="botaochamado" mat-raised-button (click)="navigateToChamadoRITMRead()">
+        Base RITM
+    </button>
+</mat-card-title>
+</mat-card>
+
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard Chamados</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" 
+            [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before"> 
+                <button mat-menu-item>Janeiro</button>
+                <button mat-menu-item>Fevereiro</button>
+                <button mat-menu-item>Março</button>
+                <button mat-menu-item>Abril</button>
+                <button mat-menu-item>Maio</button>
+                <button mat-menu-item>Junho</button>
+                <button mat-menu-item>Julho</button>
+                <button mat-menu-item>Agosto</button>
+                <button mat-menu-item>Setembro</button>
+                <button mat-menu-item>Outubro</button>
+                <button mat-menu-item>Novembro</button>
+                <button mat-menu-item>Dezembro</button>
+            </mat-menu>
+        </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Os dados entram aqui!</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
+
+
+
+
+
